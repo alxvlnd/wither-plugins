@@ -57,9 +57,9 @@
     },
     {
       "name": "WitherUpdater",
-      "version": "1.0.0",
-      "file": "jars/WitherUpdater-1.0.0.jar",
-      "sha256": "d5da9f508f0d8af2e3bc32d36dd14d83bc935c812cdd505cbba2160120cab916"
+      "version": "1.0.1",
+      "file": "jars/WitherUpdater-1.0.1.jar",
+      "sha256": "27e467b6955988f3745a6f068523009819f280ba048c2b972e086d6149d8a813"
     }
   ]
 }
