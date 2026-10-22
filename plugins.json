@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "plugins": [
+    {
+      "name": "WitherBosses",
+      "version": "1.5.5",
+      "file": "jars/WitherBosses-1.5.5.jar",
+      "sha256": "000133e915ddcc67bbcd319c656439fd4ced438fa01ba87b469e043dabbc744c"
+    },
+    {
+      "name": "WitherCrafting",
+      "version": "1.1.0",
+      "file": "jars/WitherCrafting-1.1.0.jar",
+      "sha256": "3aa5b377d78811b7dda654fdb9e1ae766ec4a21cc5056061b22256c5a9d51130"
+    },
+    {
+      "name": "WitherCrates",
+      "version": "1.0.0",
+      "file": "jars/WitherCrates-1.0.0.jar",
+      "sha256": "b370cdcbc2d3735fe79d49c68ea0a49deb649ec827574d3747b8ead47963b650"
+    },
+    {
+      "name": "WitherGens",
+      "version": "1.5.0",
+      "file": "jars/WitherGens-1.5.0.jar",
+      "sha256": "5aaaee36dd434b5815bba5048e902761411dbd56d9f16d8b91d165d069a59314"
+    },
+    {
+      "name": "WitherItems",
+      "version": "1.14.0",
+      "file": "jars/WitherItems-1.14.0.jar",
+      "sha256": "63db9ca928e774ee3c7596a75c8a71a1959e25672924a8e85a001dec3a3b7093"
+    },
+    {
+      "name": "WitherMobs",
+      "version": "1.5.0",
+      "file": "jars/WitherMobs-1.5.0.jar",
+      "sha256": "f487a66d60bb42444d0e9f99e6f547b4329c10bb4ec8ebdbbc05b3d556865438"
+    },
+    {
+      "name": "WitherRanks",
+      "version": "1.2.0",
+      "file": "jars/WitherRanks-1.2.0.jar",
+      "sha256": "eea45f6387acc8c00d14a10a63904762dbfffcf1126ad251b2e2090819dc7cd6"
+    },
+    {
+      "name": "WitherShops",
+      "version": "1.2.0",
+      "file": "jars/WitherShops-1.2.0.jar",
+      "sha256": "fdcfb34e104996e963da8666e38e83a8439c997a5c1c703fabf9ee056474a97a"
+    },
+    {
+      "name": "WitherShulkers",
+      "version": "1.1.1",
+      "file": "jars/WitherShulkers-1.1.1.jar",
+      "sha256": "8f063cf4938ef8c443dffd8ef951106c407b12e52fa5590e9f37c647cef6521a"
+    },
+    {
+      "name": "WitherUpdater",
+      "version": "1.0.0",
+      "file": "jars/WitherUpdater-1.0.0.jar",
+      "sha256": "d5da9f508f0d8af2e3bc32d36dd14d83bc935c812cdd505cbba2160120cab916"
+    }
+  ]
+}
