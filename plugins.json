@@ -3,9 +3,9 @@
   "plugins": [
     {
       "name": "WitherBosses",
-      "version": "1.5.5",
-      "file": "jars/WitherBosses-1.5.5.jar",
-      "sha256": "000133e915ddcc67bbcd319c656439fd4ced438fa01ba87b469e043dabbc744c"
+      "version": "1.5.6",
+      "file": "jars/WitherBosses-1.5.6.jar",
+      "sha256": "d358274bc125a9b651acb9f3651213d463f6448b29c4a4c1f7e84a3a7b17437a"
     },
     {
       "name": "WitherCrafting",
