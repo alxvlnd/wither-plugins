@@ -27,9 +27,9 @@
     },
     {
       "name": "WitherItems",
-      "version": "1.14.0",
-      "file": "jars/WitherItems-1.14.0.jar",
-      "sha256": "63db9ca928e774ee3c7596a75c8a71a1959e25672924a8e85a001dec3a3b7093"
+      "version": "1.14.1",
+      "file": "jars/WitherItems-1.14.1.jar",
+      "sha256": "77f52bb1f796607388cd77c8170c246a0d1e5ee5108b2803431ed5df156f1d5a"
     },
     {
       "name": "WitherMobs",
