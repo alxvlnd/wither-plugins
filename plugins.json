@@ -45,9 +45,9 @@
     },
     {
       "name": "WitherShops",
-      "version": "1.2.0",
-      "file": "jars/WitherShops-1.2.0.jar",
-      "sha256": "fdcfb34e104996e963da8666e38e83a8439c997a5c1c703fabf9ee056474a97a"
+      "version": "1.2.1",
+      "file": "jars/WitherShops-1.2.1.jar",
+      "sha256": "febdbd36111be5645ee2b0de6629494b2d41c19547d8002cee606dacd6572b12"
     },
     {
       "name": "WitherShulkers",
