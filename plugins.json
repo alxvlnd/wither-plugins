@@ -33,9 +33,9 @@
     },
     {
       "name": "WitherMobs",
-      "version": "1.6.0",
-      "file": "jars/WitherMobs-1.6.0.jar",
-      "sha256": "6b953e43a1aeb5f11ae46bb5b4f0fc7208eb9d91abb65d4eb350758cf873261a"
+      "version": "1.6.1",
+      "file": "jars/WitherMobs-1.6.1.jar",
+      "sha256": "d06b9bdc4811fe6d96bdfca6cb0f2be875aa797ae7c3f98b0f3727708eaab508"
     },
     {
       "name": "WitherRanks",
@@ -69,9 +69,9 @@
     },
     {
       "name": "WitherNPCs",
-      "version": "1.0.0",
-      "file": "jars/WitherNPCs-1.0.0.jar",
-      "sha256": "81caabee5c9c31eb2bcd042a1850fe24ab6a16e4315dead0b59e270650c264a7"
+      "version": "1.0.1",
+      "file": "jars/WitherNPCs-1.0.1.jar",
+      "sha256": "79730683c2b666b4b0f86baca46f38f52bc64d5d8a204623df73805020f7eab0"
     },
     {
       "name": "WitherSidebar",

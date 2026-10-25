@@ -1,7 +1,7 @@
 WITHERRGENS STORY UPDATE - Paper 26.3 / Java 25
 
 NEW PLUGINS
-WitherNPCs 1.0.0: /npc opens the operator editor. Create an NPC here, select its mob, set a name/gradient, and edit separate left/right click action lists.
+WitherNPCs 1.0.1: /npc opens the operator editor. Create an NPC here, select its mob, set a name/gradient, and edit separate left/right click action lists.
 WitherSidebar 1.0.0: /sidebar toggles your sidebar. /sidebar title <MiniMessage text>, /sidebar enabled on|off, /sidebar reload. Edit lines in plugins/WitherSidebar/config.yml.
 WitherTab 1.0.0: /withertab reload | enabled on|off | header <text> | footer <text>. Supports MiniMessage and \n line breaks. Ranks retain their gradient, players sort by rank, ping is shown.
 WitherLeaderboards 1.0.0: /leaderboard opens the editor. /leaderboard create <id> <blocks|deaths|kills|mobkills|playtime|rank>. /leaderboard move <id> moves it to your location. /leaderboard set <id> <option> <value>.
