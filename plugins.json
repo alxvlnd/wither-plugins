@@ -3,27 +3,27 @@
   "plugins": [
     {
       "name": "WitherBosses",
-      "version": "1.5.7",
-      "file": "jars/WitherBosses-1.5.7.jar",
-      "sha256": "21eb142d40e6c2a455c034191ae542c5bfd318b8dc4b900d14141e55ee68d765"
+      "version": "1.5.8",
+      "file": "jars/WitherBosses-1.5.8.jar",
+      "sha256": "3c5feec54e78a5d50958342553bb83e1d94e3c964c4de01bbc6fca9110c64ce8"
     },
     {
       "name": "WitherCrafting",
-      "version": "1.2.0",
-      "file": "jars/WitherCrafting-1.2.0.jar",
-      "sha256": "608e906e9713e8e9e09906764f8ad551fca32b886b1998ba0fcedd0a288b5135"
+      "version": "1.2.1",
+      "file": "jars/WitherCrafting-1.2.1.jar",
+      "sha256": "bebf93f459610f3bb26737f79600de220776d4fd0d376a94f1e4f964580e5f61"
     },
     {
       "name": "WitherCrates",
-      "version": "1.1.0",
-      "file": "jars/WitherCrates-1.1.0.jar",
-      "sha256": "3093978d073332b0e15c10ce44f1b9a5afcf4d87506f806ccae2425f283d4fff"
+      "version": "1.1.1",
+      "file": "jars/WitherCrates-1.1.1.jar",
+      "sha256": "bdb5e82d650ffe347638f00784866c450a8a9ef1dd23845ad5a665bdb4bba81e"
     },
     {
       "name": "WitherGens",
-      "version": "1.6.0",
-      "file": "jars/WitherGens-1.6.0.jar",
-      "sha256": "b30a7fa6816661591974faea55531345c01512a8849efa6c3a7fd5a61fd08b09"
+      "version": "1.6.1",
+      "file": "jars/WitherGens-1.6.1.jar",
+      "sha256": "e94c8e87292343da9b2a73809c26d2c957f0dd3c820405a5d7be2749b3236ae4"
     },
     {
       "name": "WitherItems",
@@ -33,9 +33,9 @@
     },
     {
       "name": "WitherMobs",
-      "version": "1.6.1",
-      "file": "jars/WitherMobs-1.6.1.jar",
-      "sha256": "d06b9bdc4811fe6d96bdfca6cb0f2be875aa797ae7c3f98b0f3727708eaab508"
+      "version": "1.6.2",
+      "file": "jars/WitherMobs-1.6.2.jar",
+      "sha256": "ab949fa84513f48c61ec997721fb2c4235a73dbf81af252aa1047cf0c1849a30"
     },
     {
       "name": "WitherRanks",
@@ -63,27 +63,27 @@
     },
     {
       "name": "WitherLeaderboards",
-      "version": "1.0.0",
-      "file": "jars/WitherLeaderboards-1.0.0.jar",
-      "sha256": "f41491f88020fa3762e39e50a19c38caa6fabafc60c464c42bad900fc20be378"
+      "version": "1.1.0",
+      "file": "jars/WitherLeaderboards-1.1.0.jar",
+      "sha256": "c3f01dff4330b9fd4dabe5fba4829a2fe3d47f64adbb7029b48ecd7281d3f3e7"
     },
     {
       "name": "WitherNPCs",
-      "version": "1.0.1",
-      "file": "jars/WitherNPCs-1.0.1.jar",
-      "sha256": "79730683c2b666b4b0f86baca46f38f52bc64d5d8a204623df73805020f7eab0"
+      "version": "1.1.0",
+      "file": "jars/WitherNPCs-1.1.0.jar",
+      "sha256": "1685ae0f8e4f065039e0ab9578fba5ee5bda29d895bdc027772219482934a31e"
     },
     {
       "name": "WitherSidebar",
-      "version": "1.0.0",
-      "file": "jars/WitherSidebar-1.0.0.jar",
-      "sha256": "a28c01236a85d17034e49f9da40e1978b31919a3b8a6cfee226cbb3c2af87aa2"
+      "version": "1.1.0",
+      "file": "jars/WitherSidebar-1.1.0.jar",
+      "sha256": "e58ed9d07bdb2fe81e3e07c155ba1d89f3f27a17862a053b6bdedb24924da1e1"
     },
     {
       "name": "WitherTab",
-      "version": "1.0.0",
-      "file": "jars/WitherTab-1.0.0.jar",
-      "sha256": "645084eb5541c48ead389603e477b4a28fa6449438de8553030c6ed4ffe4421e"
+      "version": "1.1.0",
+      "file": "jars/WitherTab-1.1.0.jar",
+      "sha256": "4fbffc095e8d4343e71a343f5925212fc7b8f55dc2478d16619ba1dc86b55134"
     }
   ]
 }

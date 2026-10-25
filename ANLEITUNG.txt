@@ -1,90 +1,44 @@
-WITHERRGENS STORY UPDATE - Paper 26.3 / Java 25
+WITHERRGENS – FENSTER-UPDATE
 
-NEW PLUGINS
-WitherNPCs 1.0.1: /npc opens the operator editor. Create an NPC here, select its mob, set a name/gradient, and edit separate left/right click action lists.
-WitherSidebar 1.0.0: /sidebar toggles your sidebar. /sidebar title <MiniMessage text>, /sidebar enabled on|off, /sidebar reload. Edit lines in plugins/WitherSidebar/config.yml.
-WitherTab 1.0.0: /withertab reload | enabled on|off | header <text> | footer <text>. Supports MiniMessage and \n line breaks. Ranks retain their gradient, players sort by rank, ping is shown.
-WitherLeaderboards 1.0.0: /leaderboard opens the editor. /leaderboard create <id> <blocks|deaths|kills|mobkills|playtime|rank>. /leaderboard move <id> moves it to your location. /leaderboard set <id> <option> <value>.
+Installiert werden neun Aktualisierungen. Alle neuen Einstellungen sind über Menüs und native Minecraft-Eingabefenster erreichbar. Zum Bearbeiten der Einstellungen sind OP-Rechte nötig. Eingabefehler bleiben im Fenster; bestehende Eingaben bleiben dabei erhalten.
 
-LEADERBOARD OPTIONS
-stat, title, format, limit (0-20), scale (0-4), range (0-64), background-alpha (0-255), ascending (true/false), see-through (true/false), color.1 through color.20, color.default.
-Titles and formats support MiniMessage, including <gradient:#000000:#ffffff>Text</gradient>.
-Row format placeholders: {position}, {player}, {value}, {color}.
-Default sorts deaths ascending and other statistics descending. Ties sort consistently by UUID. Values include known offline players. Generator block counting begins when this update is installed; historical generator breaks cannot be recovered from vanilla statistics.
-The sidebar is a native Minecraft scoreboard. Its background opacity is controlled by the player's Minecraft accessibility/video settings, not a separate movable desktop window.
+NPCs: /npc
+Erstellen: eigenes ID-Fenster, anschließend Mobauswahl.
+Jeder NPC besitzt genau eine gemeinsame Liste „Click commands“. Links- und Rechtsklick lösen dieselbe Liste aus. Jeder Befehl hat eigene Felder für Quelle (Player/Console), Befehl, Wiederholungen, Intervall und Verzögerung. Umordnen und Löschen haben eigene Menüs bzw. Bestätigungsfenster. Es werden keine mit | getrennten Chat-Eingaben mehr benötigt.
+Name, Dialogtext (mehrzeilig), Texturen, Custom-Modell-ID, Spieler-Skin, Beruf, Ausrüstung, benötigte Items, Verbrauch, Cooldown, Einmalaktion, Rang, Quest-ID, erforderliche/nächste Story-Stufe, Blickrichtung, Glühen, Babyform, Aktivierung, Position und Löschen sind einzeln erreichbar.
+Spieler-Story-Fortschritt und Zurücksetzen von Einmalaktionen/Cooldowns sind ebenfalls im Menü.
+Die eigentlichen Gesprächstexte erscheinen nun auch als Gesprächsfenster.
 
-CRAFTING 1.2.0
-/recipe and /recipes show unlocked custom recipes.
-/recipe unlock <recipe-id> [online-player, cached name or UUID]
-/recipe revoke <recipe-id> [player]
-These grant/revoke commands are restricted to operators and console. No player argument means the operator themselves.
-Existing /customrecipes unlock <player> <recipe-id> remains available.
-NPC console example: recipe unlock iron_sword {player}
-Existing rank locks and personal unlock requirements remain in the custom recipe editor. Rank access OR an explicit personal unlock grants access. Operators bypass access restrictions on enabled recipes.
-/customrecipes settings opens the vanilla-crafting switch, also available inside the operator recipe list.
-/customrecipes vanilla off disables vanilla inventory/table crafting and automated Crafter recipes; on re-enables it. Operators bypass manual restrictions. This does not disable furnaces, brewing, anvils or stonecutters. Default remains ON until you switch it off.
+Übernahme bestehender NPCs
+Vor dem ersten Umstellen wird npcs-before-click-migration.yml als Sicherung angelegt. Alte Links-/Rechtsklick-Listen werden übernommen; identische Einträge, die auf beiden Seiten vorkamen, werden nur einmal übernommen. Absichtlich doppelte Einträge innerhalb derselben Liste bleiben erhalten. Bis zu 32 bisherige Einträge bleiben erhalten. Bestehende Einmal-Freigaben werden zusammengeführt und der längere Cooldown bleibt bestehen. Alte Daten bleiben für einen möglichen Rückbau erhalten. Die Umstellung läuft nur einmal pro NPC.
 
-NPC ACTIONS
-Choose Left-click commands / Right-click commands. Add/edit with this format:
-console|1|1|0|recipe unlock iron_sword {player}
-player|1|1|0|spawn
-Fields: source | repetitions | repeat interval in ticks | delay before entry in ticks | command.
-16 entries per side. Each supports 1-100 runs and intervals from 1 tick. Entries execute in order; repeats finish before the next entry. A running sequence continues if the player changes held items, and stops when they disconnect or the plugin stops.
-Click: edit. Shift-left: remove entry. Right: move up. Shift-right: move down.
-Placeholders: {player}, {uuid}. Only operators can configure commands. Console commands have console authority; player commands keep player permissions.
+Sidebar: /sidebar (als OP)
+Persönliche Sichtbarkeit, serverweite Aktivierung, Titel und jede einzelne Zeile haben eigene Menüs/Fenster. Zeilen lassen sich bearbeiten, hinzufügen, verschieben und löschen. Normale Spieler können /sidebar weiterhin zum Umschalten verwenden; /sidebar toggle schaltet auch als OP direkt um.
 
-NPC STORY SETTINGS
-/npc create <id> [mob-type]
-/npc edit <id>
-/npc move <id>
-/npc set <id> <option> <value>
-Options: name (MiniMessage), type, enabled/look/glow/baby/once/consume-item (on/off), cooldown (seconds), rank (rank ID or none), quest (quest ID or none), stage (required exact story stage, -1 disables), next-stage (stage set on interaction, -1 disables), dialogue (lines separated by space | space), profession (villagers only), skin (mannequins only), texture.
-/npc stage <online-player> <quest-id> <stage>
-/npc requireitem <id> <count> copies the held item as an exact metadata requirement; count 0 clears it. Items are consumed only after progress saves. This requirement applies to both click sides.
-/npc equip <id> <hand|off_hand|head|chest|legs|feet> copies the held item as equipment. Empty hand clears that slot.
-Once/cooldown states are per-player and per click side. Quest stage defaults to 0. A quest stage condition only applies after a quest ID is configured. Set next-stage to -1 to avoid advancing a quest.
-/npc remove <id> removes the NPC definition. It does not erase player quest history.
+TAB: /withertab
+Eigene Fenster für Aktivierung, Header, Footer und Ping-Anzeige. Header und Footer sind mehrzeilig bearbeitbar. Rangfarben und Präfixe werden wie zuvor unter /rank eingestellt.
 
-CUSTOM MOB TEXTURES
-Upload mob-skin PNGs preserving the original Minecraft mob UV layout:
-plugins/WitherNPCs/textures/zombie/ice.png
-plugins/WitherMobs/textures/skeleton/desert.png
-Supported PNG model templates: zombie, husk, drowned, skeleton, stray, wither_skeleton, bogged, creeper, spider, cave_spider. Filenames: lowercase a-z, 0-9, _ and -, up to 48 characters. 64-1024 pixels wide; square or 2:1 aspect; max 2 MiB. These are full skin sheets, not portraits.
-The scanner imports PNGs approximately every five seconds, creates model/item JSONs, and writes into the existing WitherBosses pack-extra directory. The existing automatic pack publisher distributes them when enabled. Accept the updated required resourcepack before checking appearance.
-NPC: choose Custom textures in /npc or /npc set <id> texture zombie/ice.
-Mobarea: choose Custom mob textures in the existing area editor, or /mobarea textures <area-id> skeleton/desert.
-/mobarea textures <area-id> none restores the normal appearance.
-For other mob types, an existing full custom resourcepack model can be selected with model:namespace:model_key.
-Mannequin NPC player skins: /npc set <id> skin <Minecraft-player-name-or-texture-hash>.
-The generated per-entity models are rigid meshes, with entity rotation and movement. Articulated limb/walking animations and separate overlay layers are not implemented. No replacement skin artwork is included in this release.
+Ranglisten: /leaderboard
+Erstellen im Fenster mit ID und Statistik. Pro Rangliste eigene Einstellungen für Statistik, Titel, Zeilenformat, Anzahl, Größe, Reichweite, Hintergrund-Deckkraft, Sortierung, Sichtbarkeit durch Blöcke, jede Platzierungsfarbe und Standardfarbe. Position lässt sich über aktuelle Position oder exakte Koordinaten bearbeiten. Spieler können im eigenen Filterfenster ein-/ausgeschlossen werden. Löschen erfordert eine Bestätigung.
 
-CRATES 1.1.0
-Floating labels inherit the existing crate name/gradient by default and update when the name/colors change. Open a crate's editor -> Floating name tag for settings.
-/crate label <id> on|off
-/crate label <id> text <MiniMessage text with {crate} if desired>
-/crate label <id> height 1.7
-/crate label <id> range 24
-/crate label <id> scale 1
-/crate label <id> shadow on|off
-/crate label <id> background on|off
-Labels appear only in loaded chunks and are cleaned up when the plugin stops.
+Crates: /crate -> Crate auswählen -> Floating name tag
+Separate Fenster für Sichtbarkeit, Text/Gradient, Höhe, Reichweite, Größe, Schatten und Hintergrund. Der Standard {crate} übernimmt weiterhin Name und Farben der Crate.
 
-PORTALS / WITHERGENS 1.6.0
-/portal access opens a simple access editor.
-/portal lock <portal-name> none          Everyone
-/portal lock <portal-name> personal      Requires permanent personal unlock
-/portal lock <portal-name> <rank-id>     Rank at equal/higher priority OR personal unlock
-/portal unlock <portal-name> [online-player]
-/portal revoke <portal-name> [online-player]
-/portal key <portal-name> [online-player]
-Portal keys are right-clickable, permanently unlock that named portal and consume one item only on a new successful saved unlock. Existing unlocks keep the key. Commands above require operator/console access. Operators bypass portal locks. The existing warp-key commands remain separate and unchanged.
-NPC console example: portal unlock nether {player}
-For a custom WitherItems clickable reward, use a CONSOLE command with the player placeholder and enable your item's existing consumption option as appropriate; the built-in portal key already handles safe one-item consumption itself.
+Rezepte: /customrecipes
+Vanilla-Crafting erhält ein separates Auswahlfenster im Hauptmenü. Im Editor eines einzelnen Rezepts öffnet „Player recipe unlock“ eine Spielerauswahl mit Freischalten/Entziehen. Bestehende Rang- und Rezepteditoren bleiben erhalten. /recipe zeigt weiterhin freigeschaltete Rezepte; OPs umgehen Zugriffssperren.
 
-WITHERBOSSES 1.5.7
-Matching altar offerings thrown during that altar's cooldown are returned to the online thrower's inventory. If full, the uninserted remainder is moved to the player and reserved for them to pick up; no duplicate is created. Offline throwers' items are kept in-world. Merging is prevented while returning items so ownership is not lost.
+Portale: /portal
+Portalmanager mit Erstellen-Fenster. Jedes Portal hat eigene Fenster für die Zugriffsbedingung (alle, persönliches Unlock oder Rang), Schlüsselvergabe, Freischalten und Entziehen pro Spieler sowie eine Bestätigung zum Entfernen. Es ist kein Chat-Befehl zum Konfigurieren dieser Änderungen mehr nötig.
 
-INSTALLATION / RECOVERY
-The release catalog is plugins.json. The existing updater backs up old JARs, stages replacements in Paper's update directory and installs new plugins from /wupdate install <name>. A full stop/start activates the changes. Do not keep two JARs declaring the same plugin name in plugins/.
-Existing plugin data schemas and settings are preserved; new settings use separate files. Original JAR releases remain on GitHub and local baseline JARs are included in the source archive for rebuilding/recovery.
-No in-game tests were performed. Compilation, bytecode linkage, manifest checks, action-parser limits and model-face/UV bounds were checked. Runtime startup validation is recorded separately in STATUS.txt.
+Generatoren: /gen
+Auch die noch vorhandenen Chat-Abfragen für Reset-Zeit und Special-Block-Chance wurden in eigene Zahlenfenster umgewandelt. Anschließend im Gen-Editor speichern, um die Änderung zu übernehmen.
+
+Mobareas: /mobarea -> Gebiet -> Custom mob textures
+Texturgalerie wie zuvor; eine vollständige Custom-Modell-ID wird jetzt in einem eigenen Fenster eingetragen.
+
+Witherbosse: /witherboss -> Arena -> Summoning ritual
+„Cooldown offering refunds“ öffnet ein eigenes Fenster, um die Rückgabe während des Cooldowns pro Arena ein-/auszuschalten. Standard bleibt EIN. Der Rest bei vollem Inventar bleibt wie zuvor beim Spieler zur Abholung.
+
+Alle bisherigen Texturvoraussetzungen und technischen Grenzen bleiben bestehen: Die importierten Mobmodelle sind starr, das gemeinsame Server-Resourcepack muss geladen sein. PNGs werden weiterhin über Minehut hochgeladen und anschließend im Menü ausgewählt.
+
+Prüfung: Kompilierung, Klassen-/API-Verknüpfungen, Manifeste, NPC-Befehlsgrenzen und die Übernahme alter Klicklisten wurden geprüft. Der Serverstart wird zusätzlich über Minehut kontrolliert. Keine Ingame-Tests durchgeführt.
