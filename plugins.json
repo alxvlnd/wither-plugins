@@ -27,9 +27,9 @@
     },
     {
       "name": "WitherEquipment",
-      "version": "1.0.0",
-      "file": "jars/WitherEquipment-1.0.0.jar",
-      "sha256": "bd95a68e743f240255e1a0fa2a3d5ec2f8b10de9c57d4a5f78ceb058ba4caad8"
+      "version": "1.0.1",
+      "file": "jars/WitherEquipment-1.0.1.jar",
+      "sha256": "a43a6af421b5fbd635ab7a6a085ac56cffc789109ac25b088e53d81745de8fd3"
     },
     {
       "name": "WitherGens",
